@@ -14,41 +14,41 @@
   - You are asked to build a simple Quizz App
 
 ## User
- [] A user can log in with a valid username and password through a login screen
+ [ ] A user can log in with a valid username and password through a login screen
 
- [] A user can see a collection of quizzes
+ [ ] A user can see a collection of quizzes
 
- [] A user can start a quizz
+ [ ] A user can start a quizz
 
- [] A user can answer 3 questions on a quizz
+ [ ] A user can answer 3 questions on a quizz
 
- [] A user can see the scores of his quizzes
+ [ ] A user can see the scores of his quizzes
 
 
 ## Quizz
- [] A quizz has a Title
+ [ ] A quizz has a Title
 
- [] A quizz has 3 questions
+ [ ] A quizz has 3 questions
 
- [] A quizz is considered passed if +60% of questions are answered correctly
+ [ ] A quizz is considered passed if +60% of questions are answered correctly
 
 ## Question
- [] A question has 4 answers
+ [ ] A question has 4 answers
 
- [] A question has only 1 possible correct answer
+ [ ] A question has only 1 possible correct answer
 
 
 ## Bonus
 - Some nice to haves, when there is time to spare.
 
- [] Add inline validation (without page refresh) to the login form
+ [ ] Add inline validation (without page refresh) to the login form
 
- [] A quizz can have a dificulty level
+ [ ] A quizz can have a dificulty level
 
- [] Add admin role
+ [ ] Add admin role
 
- [] A user with admin role can create and edit quizzes
+ [ ] A user with admin role can create and edit quizzes
 
- [] A user can come back to a started quizz at the question he stopped
+ [ ] A user can come back to a started quizz at the question he stopped
 
- [] Add or improve a feature of your own choice
+ [ ] Add or improve a feature of your own choice
