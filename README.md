@@ -1,11 +1,5 @@
 ## Setup
-In order to run this repository you must have installed rails 6 and ruby 2.3.5.
-
-once that is done please run :
-- rails db:create
-- rails db:migrate
-- rails db:seed
-in order to ensure that the db is destroyed pre-seed
+ TO BE COMPLETED
 
 ## Guidelines
 - Fork this repository
