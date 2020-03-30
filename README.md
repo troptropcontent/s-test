@@ -1,5 +1,11 @@
 ## Setup
-- tbc
+In order to run this repository you must have installed rails 6 and ruby 2.3.5.
+
+once that is done please run :
+- rails db:create
+- rails db:migrate
+- rails db:seed
+in order to ensure that the db is destroyed pre-seed
 
 ## Guidelines
 - Fork this repository
@@ -28,20 +34,18 @@
 ## Quizz
  [ ] A quizz has a Title
 
- [ ] A quizz has 3 questions
+ [ ] A quizz has a maximum of 3 questions
 
  [ ] A quizz is considered passed if +60% of questions are answered correctly
 
 ## Question
- [ ] A question has 4 answers
+ [ ] A question has a maximum of 4 answers
 
  [ ] A question has only 1 possible correct answer
 
 
 ## Bonus
 - Some nice to haves, when there is time to spare.
-
- [ ] Add inline validation (without page refresh) to the login form
 
  [ ] A quizz can have a dificulty level
 
