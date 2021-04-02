@@ -1,0 +1,19 @@
+ <div class="container"> 
+  
+  <% @categories.each do |categorie| %>
+    <div class="quizz-category">
+      <h1 class="category-name"><%= categorie.upcase %></h1>
+      <% @quizzs.category(categorie).each do |quizz| %>
+        <%= link_to quizz do %>
+          <div class="quizz-card">
+            <h1 class="quizz-title"><%= quizz.name %></h1>
+            <h2 class="difficulty"><%= quizz.difficulty %></h2>
+            <h3 class="status">Not started yet</h3>
+          </div>
+        <% end %>
+        
+      <% end %>
+    </div>
+  <% end %>
+  
+ </div>

@@ -60,13 +60,14 @@ quizz_source_urls={ animaux: ["https://www.kiwime.com/oqdb/files/3237929525/Open
 
 require 'json'
 require 'open-uri'
-
+require 'nokogiri'
 quizz_source_urls.each do |category, quizzes|
   quizzes.each do |quizz|
     url = quizz
     quizz_serialized = open(url).read
     quizz_json = JSON.parse(quizz_serialized)
-    name = quizz_json["thème"]
+      # all names are following the format Them (blabla) I choose to keep only the part before the parenthesis
+    name = quizz_json["thème"].split("(").first.strip
     # each url contains several quizzes sorted by difficulty, i below choose to take only one randomly selected
     random_quizz = quizz_json["quizz"]["fr"].map{|diff| diff}.sample
     difficulty = random_quizz[0]
