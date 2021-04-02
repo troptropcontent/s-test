@@ -10,10 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_01_173517) do
+ActiveRecord::Schema.define(version: 2021_04_02_062553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.string "text"
+    t.boolean "correct"
+    t.bigint "question_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "attempt_answers", force: :cascade do |t|
+    t.bigint "answer_id", null: false
+    t.bigint "attempt_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["answer_id"], name: "index_attempt_answers_on_answer_id"
+    t.index ["attempt_id"], name: "index_attempt_answers_on_attempt_id"
+  end
+
+  create_table "attempts", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.integer "score"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_attempts_on_user_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "text"
+    t.bigint "quizz_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["quizz_id"], name: "index_questions_on_quizz_id"
+  end
+
+  create_table "quizzs", force: :cascade do |t|
+    t.string "categorie"
+    t.string "difficulty"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +64,14 @@ ActiveRecord::Schema.define(version: 2021_04_01_173517) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "attempt_answers", "answers"
+  add_foreign_key "attempt_answers", "attempts"
+  add_foreign_key "attempts", "users"
+  add_foreign_key "questions", "quizzs"
 end
