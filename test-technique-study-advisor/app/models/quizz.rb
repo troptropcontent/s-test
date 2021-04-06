@@ -21,7 +21,8 @@ class Quizz < ApplicationRecord
   end
 
   def attended_by_user(user)
-    quizz_attended = user.attempts.map{|attempt| attempt.quizz}.uniq
+    # check if the user_attempts contains one instance of this quizz_answers
+    quizz_attended = user.attempt_answers.map{|attempt| attempt.answer.question.quizz}.uniq
     quizz_attended.include?(self)
   end
 

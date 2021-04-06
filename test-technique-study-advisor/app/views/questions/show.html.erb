@@ -4,13 +4,15 @@
       <h2 class="question_text"><%= @question.text %></h2>
     </div>
     <div class="quizz-propositions">
-      <form action=<%=@post_attempt_url%> method="post">
-        <% @propositions.each do |prop| %>
-          <input class= "attempt_answer_checkbox" type="radio" name=<%=prop.text%> id=answer_id_<%=prop.id%>>
-          <label for=<%=prop.text%>><%=prop.text%></label>
-        <% end %>
-        <input type="submit" value="submit answer">
-      </form>
+      <%= form_with model: @new_attempt do |form| %>
+        <%= form.collection_radio_buttons :id, @propositions, :id, :text %>
+        <%= form.submit %>
+      <% end %>
+
+
+
+
+
     </div>
   </div>
 </div>

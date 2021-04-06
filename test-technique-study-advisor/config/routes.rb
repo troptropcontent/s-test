@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :quizzs, only: [:index, :show] do
     resources :questions, only: [:show]
   end
-  resources :atempts, only: [:create, :update]
+  resources :attempt_answers, only: [:create, :update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
