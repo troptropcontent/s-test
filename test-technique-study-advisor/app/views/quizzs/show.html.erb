@@ -36,7 +36,7 @@
           </div>
           <div class="quizz-propositions">
             <p class="form-guide-lines">Only one answer is possible each time</p>
-            <form action=<%=@next_question_url%> method="GET">
+            <form action=<%=@next_question_url%> method="GET" class="propositions">
               <% @propositions_test.each do |prop| %>
                 <input type="radio" name=<%=prop%> id=<%=prop%>>
                 <label for=<%=prop%>><%=prop%></label>
