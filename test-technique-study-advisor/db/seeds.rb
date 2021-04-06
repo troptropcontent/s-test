@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-quizz_source_urls={ animaux: ["https://www.kiwime.com/oqdb/files/3237929525/OpenQuizzDB_237/openquizzdb_237.json",
+quizz_source_urls={ animaux: [
                               "https://www.kiwime.com/oqdb/files/2175987377/OpenQuizzDB_175/openquizzdb_175.json"
                               # "https://www.kiwime.com/oqdb/files/2175987377/OpenQuizzDB_175/openquizzdb_175.json"
                             ],
@@ -37,7 +37,7 @@ quizz_source_urls={ animaux: ["https://www.kiwime.com/oqdb/files/3237929525/Open
                                 "https://www.kiwime.com/oqdb/files/2174457429/OpenQuizzDB_174/openquizzdb_174.json",
                                 "https://www.kiwime.com/oqdb/files/3203999424/OpenQuizzDB_203/openquizzdb_203.json"],
                     gastronomie:["https://www.kiwime.com/oqdb/files/1009794887/OpenQuizzDB_009/openquizzdb_9.json",
-                                "https://www.kiwime.com/oqdb/files/1011643469/OpenQuizzDB_011/openquizzdb_11.json",
+                                # "https://www.kiwime.com/oqdb/files/1011643469/OpenQuizzDB_011/openquizzdb_11.json",
                                 "https://www.kiwime.com/oqdb/files/1080332383/OpenQuizzDB_080/openquizzdb_80.json",
                                 "https://www.kiwime.com/oqdb/files/1096239985/OpenQuizzDB_096/openquizzdb_96.json"],
                     histoire:["https://www.kiwime.com/oqdb/files/1024448443/OpenQuizzDB_024/openquizzdb_24.json",

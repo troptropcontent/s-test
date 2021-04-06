@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   # associations setting
-  has_many :attempts
+  has_many :attempt_answers
   # validation setting
     # last_name
   # validates :last_name, presence: true

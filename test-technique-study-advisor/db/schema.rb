@@ -55,19 +55,11 @@ ActiveRecord::Schema.define(version: 2021_04_02_125759) do
 
   create_table "attempt_answers", force: :cascade do |t|
     t.bigint "answer_id", null: false
-    t.bigint "attempt_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["answer_id"], name: "index_attempt_answers_on_answer_id"
-    t.index ["attempt_id"], name: "index_attempt_answers_on_attempt_id"
-  end
-
-  create_table "attempts", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.integer "score"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_attempts_on_user_id"
+    t.index ["user_id"], name: "index_attempt_answers_on_user_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -106,7 +98,6 @@ ActiveRecord::Schema.define(version: 2021_04_02_125759) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "answers", "questions"
   add_foreign_key "attempt_answers", "answers"
-  add_foreign_key "attempt_answers", "attempts"
-  add_foreign_key "attempts", "users"
+  add_foreign_key "attempt_answers", "users"
   add_foreign_key "questions", "quizzs"
 end
