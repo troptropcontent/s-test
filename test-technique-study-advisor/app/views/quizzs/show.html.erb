@@ -1,17 +1,56 @@
 <div class="container">
-  <div class="quizz-window">
-    <div class="quizz-screen">
-      <h1 class="quizz-intro"> Hello <%=@user.username %></h1>
-      <h2 class="quizz-explanation">This quizz is <%= @number_of_questions %> questions long, only one answer is possible for each question</h2>
-    </div>
-    <div class="quizz-propositions">
-      <form action=<%=@next_question_url%> method="GET">
-        <% @propositions_test.each do |prop| %>
-          <input type="radio" name=<%=prop%> id=<%=prop%>>
-          <label for=<%=prop%>><%=prop%></label>
-        <% end %>
-        <input type="submit" value="submit answer">
-      </form>
-    </div>
-  </div>
+  <%# Three cases possible here :  %>
+    <%# this quizz has already been attempted by user @status == "attempted" %>
+    <%# this quizz has been started by user @status == "started"  %>
+    <%# this quizz have not been attempted yet @status == "not-started"  %>
+  <% if @status == "attempted" %>
+      <%# first case %>
+      <div class="quizz-window">
+        <div class="quizz-screen">
+          <h2 class="quizz-explanation">You already passed the test</h2>
+        </div>
+        <div class="quizz-propositions">
+          <form action=<%=@next_question_url%> method="GET">
+            <input type="submit" value="go back to quizzes">
+          </form>
+        </div>
+      </div>
+    <% elsif @status == "started" %>
+      <%# second case %>
+      <div class="quizz-window">
+          <div class="quizz-screen">
+            <h2 class="quizz-explanation">You already started this test</h2>
+          </div>
+          <div class="quizz-propositions">
+            <form action=<%=@next_question_url%> method="GET">
+              <input type="submit" value="resume test">
+            </form>
+          </div>
+        </div>
+    <% else %>
+    <%# last case %>
+      <div class="quizz-window">
+          <div class="quizz-screen">
+            <h2 class="quizz-explanation">Ready for this new quizz ?</h2>
+            <h3 class="quizz-guideline">This quizz is <%= @number_of_questions %> questions long</h1>
+          </div>
+          <div class="quizz-propositions">
+            <p class="form-guide-lines">Only one answer is possible each time</p>
+            <form action=<%=@next_question_url%> method="GET">
+              <% @propositions_test.each do |prop| %>
+                <input type="radio" name=<%=prop%> id=<%=prop%>>
+                <label for=<%=prop%>><%=prop%></label>
+              <% end %>
+              <input type="submit" value="I understand, let's go">
+            </form>
+          </div>
+        </div>    
+  <% end %>
+  
+
+
+
+
+
+
 </div>
