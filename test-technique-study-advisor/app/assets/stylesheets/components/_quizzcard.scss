@@ -1,6 +1,31 @@
-.quizz-card{
-  background-color: white;
-  padding: 10px;
-  margin-bottom: 10px;
-  box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, .2);
+
+
+.quizz-card-link{
+  .quizz-card{
+    background-color: white;
+    color: $dark;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, .2);
+    .category-tag{
+      h3{
+        background-color: aliceblue;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 5px;
+        }
+      }
+    }
+}
+
+.quizz-card-link:hover{
+  text-decoration: none;
+  .quizz-card{
+    margin-left: 15px;
+    .category-tag{
+      h3{
+
+        }
+      }
+    }
 }
