@@ -24,6 +24,10 @@ class Quizz < ApplicationRecord
     quizz_attended = user.attempts.map{|attempt| attempt.quizz}.uniq
     quizz_attended.include?(self)
   end
+
+  def leader_board
+    
+  end
   
   scope :category, ->(category) { where("categorie = ?", category) }
 
