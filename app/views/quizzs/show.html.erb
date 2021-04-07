@@ -8,7 +8,7 @@
       <div class="quizz-window">
         <div class="quizz-screen">
           <h2 class="quizz-explanation">Vous avez déja passé ce test</h2>
-          <p class="quizz-submission-date">Vous l'avais passé le <%= @submission_date %></p>
+          <p class="quizz-submission-date">Vous l'avez passé le <%= @submission_date %></p>
           <p>Votre était : <%= number_to_percentage(@score*100, precision: 0) %></p>
         </div>
         <div class="quizz-propositions">
@@ -33,11 +33,11 @@
     <%# last case %>
       <div class="quizz-window">
           <div class="quizz-screen">
-            <h2 class="quizz-explanation">Pret pour ce nouveau quizz ?</h2>
+            <h2 class="quizz-explanation">Prêt pour ce nouveau quizz ?</h2>
             <h3 class="quizz-guideline">Ce quizz comporte <%= @number_of_questions %> questions</h1>
           </div>
           <div class="quizz-propositions">
-            <p class="form-guide-lines">Seul une réponse est possible par question</p>
+            <p class="form-guide-lines">Seule une réponse est possible par question</p>
             <form action=<%=@next_question_url%> method="GET" class="propositions">
               <% @propositions_test.each do |prop| %>
                 <input type="radio" name=<%=prop%> id=<%=prop%>>

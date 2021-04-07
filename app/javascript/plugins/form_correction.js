@@ -50,7 +50,7 @@ const formCorrection = () => {
             // the user submited the correct anwer
             // change the text of the screen
             question_text.innerText = "Correct !!"
-            question_text.insertAdjacentHTML("afterend", `<p>Le saviez-vous ? ${result.anecdote} ?</p>`)
+            question_text.insertAdjacentHTML("afterend", `<p>Le saviez-vous ? ${result.anecdote}</p>`)
             submitZone.innerHTML = `<a class="nav-link" href=${result.path_to_redirect_to}>Question suivante</a>`
             // turning the selected question in green
             document.querySelector('.selected').classList.toggle("correct")
