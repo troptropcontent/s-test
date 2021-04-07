@@ -28,8 +28,11 @@ const formCorrection = () => {
       body: formdata,
       redirect: 'follow'
       };
+
+      // determine the url depending on the environment
+      const url = window.location.href.match(/https*:\/\/([a-zA-B.:0-9])*/)[0]
     
-      fetch("http://localhost:3000/api/v1/attempt_answers", requestOptions)
+      fetch(`${url}/api/v1/attempt_answers`, requestOptions)
       .then(response => response.json())
       // the response is a json following the format : 
       // {
