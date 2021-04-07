@@ -28,7 +28,7 @@ The quizzes are also divided by three difficulty level :
 - Advance
 - Expert
 
-# Screenshot of the quizzes index of the app
+# Screenshot of the quizz list of the app
 
 ![](captureIndexSmall.png)
 
