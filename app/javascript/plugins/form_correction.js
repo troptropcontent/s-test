@@ -2,10 +2,11 @@ const formCorrection = () => {
   // here we want to submit the form by AJAX and change the view according to the answer received in JSON
   
   const submitBtn = document.querySelector('input[type="submit"]')
+  const quizzPropositions = document.querySelector(".quizz-propositions")
   
   // create an add event listener on the submit click
   
-  if (submitBtn) {
+  if (submitBtn && quizzPropositions) {
     
     submitBtn.addEventListener('click', (event) => {
       const authenticity_token = document.querySelector('input[name="authenticity_token"]').value
