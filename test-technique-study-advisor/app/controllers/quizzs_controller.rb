@@ -19,7 +19,7 @@ class QuizzsController < ApplicationController
     elsif @status == "started"
       @next_question_url = "/quizzs/#{@quizz.id}/questions/#{@quizz.last_question_answered_by_user(@user).next_question?.id}"
     else 
-      @propositions_test = ["Proposition 1","Proposition 2","Proposition 3"]
+      @propositions_test = ["Proposition 1","Proposition 2","Proposition 3","Proposition 4"]
       @number_of_questions = @quizz.questions.count
       @next_question_url = "/quizzs/#{@quizz.id}/questions/#{@quizz.questions.first.id}"
     end

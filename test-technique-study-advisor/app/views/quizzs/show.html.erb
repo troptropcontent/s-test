@@ -7,9 +7,9 @@
       <%# first case %>
       <div class="quizz-window">
         <div class="quizz-screen">
-          <h2 class="quizz-explanation">You already passed the test</h2>
-          <p class="quizz-submission-date">You took this quizz on <%= @submission_date %></p>
-          <p>Your score was : <%= number_to_percentage(@score*100, precision: 0) %></p>
+          <h2 class="quizz-explanation">Vous avez déja passé ce test</h2>
+          <p class="quizz-submission-date">Vous l'avais passé le <%= @submission_date %></p>
+          <p>Votre était : <%= number_to_percentage(@score*100, precision: 0) %></p>
         </div>
         <div class="quizz-propositions">
           <form action=<%=@next_question_url%> method="GET">
@@ -21,11 +21,11 @@
       <%# second case %>
       <div class="quizz-window">
           <div class="quizz-screen">
-            <h2 class="quizz-explanation">You already started this test</h2>
+            <h2 class="quizz-explanation">Vous avez commencé ce test</h2>
           </div>
           <div class="quizz-propositions">
             <form action=<%=@next_question_url%> method="GET">
-              <input type="submit" value="resume test">
+              <input type="submit" value="Reprendre le test">
             </form>
           </div>
         </div>
