@@ -5,7 +5,7 @@
 You can visit the link [quizztom.herokuapp.com/](https://quizztom.herokuapp.com/)
 
 ## Welcome in QuizzTom
-QuizzTom is a application wich proposes 46 quizzes.
+QuizzTom is an application wich proposes 46 quizzes.
 The quizzes are divided in 13 catégories :
 
 - Animals
@@ -28,7 +28,7 @@ The quizzes are also divided by three difficulty level :
 - Advance
 - Expert
 
-# Screenshot of the quizz list of the app
+# Screenshot of the quizz list in the app
 
 ![](captureIndexSmall.png)
 
