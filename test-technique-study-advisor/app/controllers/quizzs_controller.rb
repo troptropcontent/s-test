@@ -10,11 +10,21 @@ class QuizzsController < ApplicationController
     params[:id]
     )
     @user = current_user
-    @number_of_questions = @quizz.questions.count
-    @quiz_taken_by_current_user = @quizz.attended_by_user(current_user)
-    @propositions_test = ["Proposition 1","Proposition 2","Proposition 3"]
-    @quizz_questions = @quizz.questions
-    @next_question_url = "/quizzs/#{@quizz.id}/questions/#{@quizz_questions.first.id}"
+    @status = @quizz.attempted_by_user(@user)
+
+    if @status == "attempted"
+      @next_question_url = "/"
+      @submission_date = @quizz.attempt_date(@user).strftime("%m/%d/%Y")
+      @score = @quizz.attempt_score(@user)
+    elsif @status == "started"
+      @next_question_url = "/quizzs/#{@quizz.id}/questions/#{@quizz.last_question_answered_by_user(@user).next_question?.id}"
+    else 
+      @propositions_test = ["Proposition 1","Proposition 2","Proposition 3"]
+      @number_of_questions = @quizz.questions.count
+      @next_question_url = "/quizzs/#{@quizz.id}/questions/#{@quizz.questions.first.id}"
+    end
+
+
   end
   
   
