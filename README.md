@@ -60,13 +60,13 @@ rails db:create
 rails db:migrate
 rails db:seed
 ```
-Finally, launch a local server 
+Finally, launch a local server :
 
 ```
 rails s
 ```
 
-Visit the localHost window generated on the port of you choice
+Visit the localHost window generated on the port of you choice.
 
 You are all set now, you can give the app a try !
 
