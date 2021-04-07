@@ -15,6 +15,9 @@
     .question_text{
       padding: 10px;
     }
+    p{
+      padding: 10px;
+    }
   }
   .quizz-propositions{
     background-color: $two;
@@ -33,20 +36,35 @@
           }
           label{
             background-color: white;
-            margin: 10px;
+            margin: 10px; 
             border-radius: 10px;
           }
           label.selected{
             border: 2px solid black;
           }
+          label.correct{
+            background-color: darkseagreen;
+          }
+          label.wrong{
+            background-color: mistyrose;
+          }
           input[type="submit"] {
+            width: -webkit-fill-available;
             margin: 10px;
             background-color: $dark;
             color: white;
             border-radius: 10px;
             border:none;
           }
-        }
+          a.nav-link{
+            width: -webkit-fill-available;
+            margin: 10px;
+            background-color: $dark;
+            color: white;
+            border-radius: 10px;
+            border:none;
+          }
+        } 
       }
     }
     

@@ -4,6 +4,24 @@
     <%= link_to quizz , class:"quizz-card-link" do %>
       <div class="quizz-card">
         <h1 class="quizz-title"><%= quizz.name %></h1>
+        <div class="quizz-status">
+          <%# the status is either "attempted" (passed or failed following the score) "started" if already started and "not started" if not started %>
+          <% if quizz.attempted_by_user(@user) == "attempted" %>
+              <%# si le score est supérieur a 60% le quizz est réussi %>
+              <% if quizz.attempt_score(@user) >= 0.6 %>
+                <h3 class="status passed">Réussi</h3>
+                <% else %>
+                <h3 class="status failed">Echec</h3>
+              <% end %>
+            <% else %>
+              
+              <% if quizz.attempted_by_user(@user) == "started" %>
+                <h3 class="status started">Commencé</h3>
+                <% else %>
+                <h3 class="status">Non essayé</h3>
+              <% end %>
+          <% end %>
+        </div>
         <h3 class="status"><%= quizz.attempted_by_user(@user) %></h3>
         <h2 class="difficulty"><%= quizz.difficulty %></h2>
         

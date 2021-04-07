@@ -16,7 +16,7 @@ const formCorrection = () => {
   
     const formdata = new FormData();
     formdata.append("authenticity_token", authenticity_token);
-    formdata.append("attempt_answer[id]", document.querySelector('.selected').attributes.for.value.split('_')[3]);
+    formdata.append("attempt_answer[id]", document.querySelector('.selected').attributes.for.value.split('_')[1]);
     formdata.append("commit", "Create Attempt answer");
   
     const requestOptions = {
@@ -35,7 +35,7 @@ const formCorrection = () => {
     // }
     .then(result => { console.log(result)
       // two cases possible here
-        const userAnswer = document.querySelector('.selected').attributes.for.value.split('_')[3]
+        const userAnswer = document.querySelector('.selected').attributes.for.value.split('_')[1]
         const correctAnswer = result.correct_answer[0].id
         const question_text = document.querySelector(".question_text")
         const submitZone = document.querySelector(".submit-zone")
@@ -44,13 +44,19 @@ const formCorrection = () => {
           // the user submited the correct anwer
           // change the text of the screen
           question_text.innerText = "Correct !!"
-          question_text.insertAdjacentHTML("afterend", `<p>did you know that ${result.anecdote} ?</p>`)
-          submitZone.innerHTML = `<a class="nav-link" href=${result.path_to_redirect_to}>Next question</a>`
+          question_text.insertAdjacentHTML("afterend", `<p>Le saviez-vous ? ${result.anecdote} ?</p>`)
+          submitZone.innerHTML = `<a class="nav-link" href=${result.path_to_redirect_to}>Question suivante</a>`
+          // turning the selected question in green
+          document.querySelector('.selected').classList.toggle("correct")
         } else {
           // the user was wrong
           question_text.innerText = `Aie, the correct answer was ${result.correct_answer[0].text}`
-          question_text.insertAdjacentHTML("afterend", `<p>did you know that ${result.anecdote} ?</p>`)
-          submitZone.innerHTML = `<a class="nav-link" href=${result.path_to_redirect_to}>Next question</a>`
+          question_text.insertAdjacentHTML("afterend", `<p>Le saviez-vous ? ${result.anecdote} ?</p>`)
+          submitZone.innerHTML = `<a class="nav-link" href=${result.path_to_redirect_to}>Question suivante</a>`
+          // turning the correct answer green
+          document.querySelector(`label[for="id_${correctAnswer}"]`).classList.toggle("correct")
+          // turning the user answer red
+          document.querySelector('.selected').classList.toggle("wrong")
         }
     })
     .catch(error => console.log('error', error));

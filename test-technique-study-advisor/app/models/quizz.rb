@@ -45,7 +45,7 @@ class Quizz < ApplicationRecord
       querry = AttemptAnswer.joins("INNER JOIN answers ON answers.id = attempt_answers.answer_id 
                                     INNER JOIN questions ON questions.id = answers.question_id
                                     INNER JOIN quizzs ON quizzs.id = questions.quizz_id").where("quizz_id = ? and attempt_answers.user_id = ?", self.id, user.id) 
-      score = (querry.map{|answer| answer.correct? ? 1 : 0 }.sum)/(querry.count)
+      score = (querry.map{|answer| answer.correct? ? 1 : 0 }.sum).fdiv(querry.count)
       return score
     else
       attempted_by_user(user) == "not-started" ? "not-started" : "started"
