@@ -1,40 +1,41 @@
 ![](logoReadMeSmall.png)
 
-## Si vous voulez essayer l'application
+## If you want to give the app a try
 
-rendez-vous sur [quizztom.herokuapp.com/](https://quizztom.herokuapp.com/)
+You can visit the link [quizztom.herokuapp.com/](https://quizztom.herokuapp.com/)
 
-## Bienvenue dans QuizzTom
-QuizzTom est une application qui propose 46 quizz. 
-Les quizz sont repartis dans 13 catégories :
+## Welcome in QuizzTom
+QuizzTom is a application wich proposes 46 quizzes.
+The quizzes are divided in 13 catégories :
 
-- Animaux
-- Archéologie
+- Animals
+- Archeology
 - Art
 - Bd
 - Celebrites
 - Cinema
-- Culture_generale
-- Géographie
-- Gastronomie
-- Histoire
-- Littérature
-- Musique
-- Nature
+- General_culture
+- Geography
+- Gastronomy
+- History
+- Litterature
+- Music
+- Natur
 
-Les quizz sont aussi caractérisés par trois niveaux de difficulté : 
+The quizzes are also divided by three difficulty level : 
 
-- Débutant
-- Confirmé
+- Begginer
+- Advance
 - Expert
 
-# Extraits de la liste des quizz de l'application
+# Screenshot of the quizzes index of the app
+
 ![](captureIndexSmall.png)
 
 
-## Modèle de données
+## Data Schema
 
-J'ai créé cinq modèles pour structurer l'application :
+I created five models to structure the data of the app:
 
 ![](dbSchemaSmall.png)
 
@@ -46,15 +47,13 @@ J'ai créé cinq modèles pour structurer l'application :
 
 ## Setup
 
-Pour lancer l'application pour la première fois vous pouvez lancer les commandes suivantes:
-```
-cd test-technique-study-advisor
-```
+To launch the app for the first time you can run the following command line:
+
 ```
 bundle install
 ```
 
-Ensuite créez, migrez et remplissez la base de données:
+Then kickstart the database:
 
 ```
 rails db:create
@@ -62,7 +61,7 @@ rails db:migrate
 rails db:seed
 ```
 
-Tout est bon, vous pouvez essayer tous les quizz !
+You are all set now, you can give the app a try !
 
 ## Guidelines
 - Fork this repository
