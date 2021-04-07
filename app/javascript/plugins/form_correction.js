@@ -30,6 +30,7 @@ const formCorrection = () => {
       };
 
       // determine the url depending on the environment
+        // the regex will match the correct base url to wich the AJX request should be fired
       const url = window.location.href.match(/https*:\/\/([a-zA-B.:0-9])*/)[0]
     
       fetch(`${url}/api/v1/attempt_answers`, requestOptions)
