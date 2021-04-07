@@ -1,29 +1,34 @@
 ![](logoReadMeSmall.png)
-## Bienvenu dans QuizzTom
+
+## Si vous voulez essayer l'application
+
+rendez-vous sur [quizztom.herokuapp.com/](https://quizztom.herokuapp.com/)
+
+## Bienvenue dans QuizzTom
 QuizzTom est une application qui propose 46 quizz. 
 Les quizz sont repartis dans 13 catégories :
 
 - Animaux
-- Archeologie
+- Archéologie
 - Art
 - Bd
 - Celebrites
 - Cinema
 - Culture_generale
-- Geographie
+- Géographie
 - Gastronomie
 - Histoire
-- Litérature
+- Littérature
 - Musique
 - Nature
 
-les quizzs sont aussi caractérisé par trois niveaux de difficulté : 
+Les quizz sont aussi caractérisés par trois niveaux de difficulté : 
 
 - Débutant
 - Confirmé
 - Expert
 
-# Extrais de la liste des quizzs de l'application
+# Extraits de la liste des quizz de l'application
 ![](captureIndexSmall.png)
 
 
@@ -41,7 +46,7 @@ J'ai créé cinq modèles pour structurer l'application :
 
 ## Setup
 
-To launch the application, you can run the following comand lines
+Pour lancer l'application pour la première fois vous pouvez lancer les commandes suivantes
 ```
 cd test-technique-study-advisor
 ```
@@ -49,7 +54,7 @@ cd test-technique-study-advisor
 bundle install
 ```
 
-Then kickstart the database
+Ensuite créez, migrez et remplissez la base de donnée
 
 ```
 rails db:create
@@ -57,7 +62,7 @@ rails db:migrate
 rails db:seed
 ```
 
-Your are all set to try all the  quizzes.
+Tout est bon, vous pouvez essayer tous les quizz
 
 ## Guidelines
 - Fork this repository
