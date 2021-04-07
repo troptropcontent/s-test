@@ -80,4 +80,3 @@ class Quizz < ApplicationRecord
   scope :category, ->(category) { where("categorie = ?", category) }
 
 end
-
