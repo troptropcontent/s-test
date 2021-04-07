@@ -12,20 +12,20 @@ The quizzes are divided in 13 catégories :
 - Archeology
 - Art
 - Bd
-- Celebrites
+- Celebrities
 - Cinema
-- General_culture
+- General_knowledge
 - Geography
 - Gastronomy
 - History
 - Litterature
 - Music
-- Natur
+- Nature
 
-The quizzes are also divided by three difficulty level : 
+The quizzes are also divided by three difficulty levels : 
 
 - Begginer
-- Advance
+- Advanced
 - Expert
 
 # Screenshot of the quizz list in the app
