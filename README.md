@@ -32,7 +32,7 @@ Les quizz sont aussi caractérisés par trois niveaux de difficulté :
 ![](captureIndexSmall.png)
 
 
-## Modèle de donnée
+## Modèle de données
 
 J'ai créé cinq modèles pour structurer l'application :
 
@@ -46,7 +46,7 @@ J'ai créé cinq modèles pour structurer l'application :
 
 ## Setup
 
-Pour lancer l'application pour la première fois vous pouvez lancer les commandes suivantes
+Pour lancer l'application pour la première fois vous pouvez lancer les commandes suivantes:
 ```
 cd test-technique-study-advisor
 ```
@@ -54,7 +54,7 @@ cd test-technique-study-advisor
 bundle install
 ```
 
-Ensuite créez, migrez et remplissez la base de donnée
+Ensuite créez, migrez et remplissez la base de données:
 
 ```
 rails db:create
@@ -62,7 +62,7 @@ rails db:migrate
 rails db:seed
 ```
 
-Tout est bon, vous pouvez essayer tous les quizz
+Tout est bon, vous pouvez essayer tous les quizz !
 
 ## Guidelines
 - Fork this repository
