@@ -4,9 +4,11 @@
       <h2 class="question_text"><%= @question.text %></h2>
     </div>
     <div class="quizz-propositions">
-      <%= form_with model: @new_attempt, class:"propositions" do |form| %>
+      <%= form_with url: "/api/v1/attempt_answers", method: :post, class:"propositions" do |form| %>
         <%= form.collection_radio_buttons :id, @propositions, :id, :text %>
-        <%= form.submit %>
+        <div class="submit-zone">
+        <%= form.submit "Valider la réponse" %>
+        </div>
       <% end %>
     </div>
   </div>

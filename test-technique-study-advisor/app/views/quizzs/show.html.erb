@@ -7,9 +7,9 @@
       <%# first case %>
       <div class="quizz-window">
         <div class="quizz-screen">
-          <h2 class="quizz-explanation">You already passed the test</h2>
-          <p class="quizz-submission-date">You took this quizz on <%= @submission_date %></p>
-          <p>Your score was : <%= number_to_percentage(@score*100, precision: 0) %></p>
+          <h2 class="quizz-explanation">Vous avez déja passé ce test</h2>
+          <p class="quizz-submission-date">Vous l'avais passé le <%= @submission_date %></p>
+          <p>Votre était : <%= number_to_percentage(@score*100, precision: 0) %></p>
         </div>
         <div class="quizz-propositions">
           <form action=<%=@next_question_url%> method="GET">
@@ -21,11 +21,11 @@
       <%# second case %>
       <div class="quizz-window">
           <div class="quizz-screen">
-            <h2 class="quizz-explanation">You already started this test</h2>
+            <h2 class="quizz-explanation">Vous avez commencé ce test</h2>
           </div>
           <div class="quizz-propositions">
             <form action=<%=@next_question_url%> method="GET">
-              <input type="submit" value="resume test">
+              <input type="submit" value="Reprendre le test">
             </form>
           </div>
         </div>
@@ -33,17 +33,17 @@
     <%# last case %>
       <div class="quizz-window">
           <div class="quizz-screen">
-            <h2 class="quizz-explanation">Ready for this new quizz ?</h2>
-            <h3 class="quizz-guideline">This quizz is <%= @number_of_questions %> questions long</h1>
+            <h2 class="quizz-explanation">Pret pour ce nouveau quizz ?</h2>
+            <h3 class="quizz-guideline">Ce quizz comporte <%= @number_of_questions %> questions</h1>
           </div>
           <div class="quizz-propositions">
-            <p class="form-guide-lines">Only one answer is possible each time</p>
+            <p class="form-guide-lines">Seul une réponse est possible par question</p>
             <form action=<%=@next_question_url%> method="GET" class="propositions">
               <% @propositions_test.each do |prop| %>
                 <input type="radio" name=<%=prop%> id=<%=prop%>>
                 <label for=<%=prop%>><%=prop%></label>
               <% end %>
-              <input type="submit" value="I understand, let's go">
+              <input type="submit" value="Ok, c'est parti">
             </form>
           </div>
         </div>    

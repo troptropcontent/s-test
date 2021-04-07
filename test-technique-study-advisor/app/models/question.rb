@@ -16,6 +16,11 @@ class Question < ApplicationRecord
     end
   end
 
+  def  correct_answer
+    Answer.where("question_id = ? and correct =?", self.id, true)
+  end
+  
+
   
   
 end

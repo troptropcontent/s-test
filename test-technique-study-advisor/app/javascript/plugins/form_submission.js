@@ -7,7 +7,7 @@ const formSubmission = () => {
   const propositions = document.querySelector('.propositions')
   if (propositions) {
     // selection of all the labels with the attributes for like 'attempt_answer_id', we set the input hidden by default in the CSS
-    const labels = document.querySelectorAll("label[for*='attempt_answer_id']")
+    const labels = document.querySelectorAll("label[for*='id_']")
     labels.forEach(element => {
       element.addEventListener('click',(event)=>{
         const selected = document.querySelector('.selected')
@@ -17,7 +17,6 @@ const formSubmission = () => {
         // there is no need to check the input with js as it is a radio button, it is check when the label is checked
         const label = event.target
         label.classList.toggle("selected")
-        
       })
     });
   }

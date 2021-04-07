@@ -7,6 +7,36 @@
     padding: 10px;
     margin-bottom: 10px;
     box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, .2);
+    .quizz-status{
+      h3{
+        background-color: white;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 5px;
+        }
+      h3.failed{
+        background-color: lavenderblush;
+        }
+      h3.passed{
+        background-color: rgba(0, 255, 127,.1);
+        }
+      h3.started{
+        background-color: rgba(255, 255, 0,.1);
+        }
+    }
+    .difficulty-tag{
+      display: flex;
+      .difficulty-icons{
+        margin-left: 8px;
+        display: flex;
+        h2{
+          margin-left: 8px;
+        }
+        i.light-square{
+          color: rgba(170, 170, 170, .2);
+        }
+      }
+    }
     .category-tag{
       h3{
         background-color: aliceblue;
@@ -22,10 +52,5 @@
   text-decoration: none;
   .quizz-card{
     margin-left: 15px;
-    .category-tag{
-      h3{
-
-        }
-      }
     }
 }
