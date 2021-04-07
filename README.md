@@ -112,4 +112,4 @@ Tout est bon, vous pouvez essayer tous les quizz !
 
  [X] A user can come back to a started quizz at the question he stopped
 
- [ ] Add or improve a feature of your own choice
+ [X] Add or improve a feature of your own choice
