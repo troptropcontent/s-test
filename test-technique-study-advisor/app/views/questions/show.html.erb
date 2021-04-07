@@ -6,7 +6,9 @@
     <div class="quizz-propositions">
       <%= form_with model: @new_attempt, class:"propositions" do |form| %>
         <%= form.collection_radio_buttons :id, @propositions, :id, :text %>
+        <div class="submit-zone">
         <%= form.submit %>
+        </div>
       <% end %>
     </div>
   </div>

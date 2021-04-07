@@ -17,7 +17,6 @@ const formSubmission = () => {
         // there is no need to check the input with js as it is a radio button, it is check when the label is checked
         const label = event.target
         label.classList.toggle("selected")
-        
       })
     });
   }

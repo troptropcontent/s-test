@@ -11,7 +11,7 @@ class AttemptAnswersController < ApplicationController
       redirect_to quizz_question_path(quizz_id: next_question.quizz.id, id: next_question.id)
     else
       # redirect to the quizz_show
-      redirect_to answer.question.quizz
+      redirect_to answer.question.quizz 
     end
   end
   
