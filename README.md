@@ -46,7 +46,7 @@ J'ai créé cinq modèles pour structurer l'application :
 
 ## Setup
 
-To launch the application, you can run the following comand lines
+Pour lancer l'application pour la première fois vous pouvez lancer les commandes suivantes
 ```
 cd test-technique-study-advisor
 ```
@@ -54,7 +54,7 @@ cd test-technique-study-advisor
 bundle install
 ```
 
-Then kickstart the database
+Ensuite créez, migrez et remplissez la base de donnée
 
 ```
 rails db:create
@@ -62,7 +62,7 @@ rails db:migrate
 rails db:seed
 ```
 
-Your are all set to try all the quizzes.
+Tout est bon, vous pouvez essayer tous les quizz
 
 ## Guidelines
 - Fork this repository
