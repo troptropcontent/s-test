@@ -8,6 +8,8 @@
       <div class="quizz-window">
         <div class="quizz-screen">
           <h2 class="quizz-explanation">You already passed the test</h2>
+          <p class="quizz-submission-date">You took this quizz on <%= @submission_date %></p>
+          <p>Your score was : <%= number_to_percentage(@score*100, precision: 0) %></p>
         </div>
         <div class="quizz-propositions">
           <form action=<%=@next_question_url%> method="GET">
